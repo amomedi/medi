@@ -1,0 +1,157 @@
+
+
+/** features start */
+.features {
+    margin: 2rem 0 4rem;
+    padding: 1px 0;
+
+    &-row {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-title {
+        margin: 8rem 0 6rem;
+
+        h2 {
+            font-weight: 400;
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+    &-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    &-item { 
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 48%;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border: 1px solid var(--border-line-color);
+        border-radius: 4px;
+
+        &__icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-right: 1.50rem;
+            padding: 1rem;
+            //border: 1px solid var(--border-line-color);
+            border-radius: 50%;
+
+            background-color: var(--rows-color);
+
+            &-color {
+                fill: var(--purple-color)
+            }
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__title {
+
+            h4 {
+                font-weight: 400;
+                font-size: 1.50rem;
+            }
+            p {
+                margin: 1rem 0;
+                font-size: 0.90rem;
+            }
+        }
+    }
+
+}
+
+body.dark {
+    .site-layout {
+        .features {
+            &-item {
+                &__icon {
+                    &-color {
+                        fill: var(--yellow-color);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/** features end */
+
+
+
+/** features media screen start */
+@media screen and (max-width: 1000px) {
+ 
+    .features {
+
+        &-title {
+            margin: 8rem 0 3rem;
+        }
+        
+        &-block {
+            display: block;
+        }
+        
+        &-item {
+            width: 100%;
+        }
+
+    }
+
+}
+/** features media screen end */
+
+
+/** features media screen start */
+@media screen and (max-width: 670px) {
+
+    .features {
+        margin: 2rem 0 2rem;
+
+        &-title {
+            margin: 8rem 0 4rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+        }
+        
+        &-item {
+            display: block;
+            text-align: center;
+
+            &__icon {
+                margin: 1rem auto;
+            }
+
+            &__title {
+
+                h4 {
+                    font-size: 1.20rem;
+                }
+
+            }
+        }
+
+    }
+
+}
+/** features media screen end */
+
+

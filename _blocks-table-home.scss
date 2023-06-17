@@ -1,0 +1,235 @@
+
+
+/** table home start */
+.table-home {
+
+    &__row {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    &__title {
+        margin: 10rem 0 6rem;
+
+        h2 {
+            font-weight: 400;
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        margin-top: 3rem;
+        text-align: center;
+
+        a {
+            outline: none;
+            display: inline-block;
+            font-size: 0.90rem;
+            color: var(--second-text-color);
+            transition: all 0.5s ease-out;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: var(--yellow-color);
+                transition: all 0.5s ease-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+                color: var(--yellow-color);
+            }
+        }
+    }
+
+    table {
+        thead, tbody {
+            padding: 0;
+            text-align: left;
+        }
+
+        tr {
+            padding: 0;
+            text-align: left;
+        }
+
+        th {
+            padding-bottom: 1rem;
+        }
+
+        td {
+            &:nth-last-child(1) {
+                .list-body__value {
+                    justify-content: flex-end;
+                    padding-right: 0.60rem;
+                }
+            }
+        }
+    }
+
+}
+
+.list-table {
+    width: 100%;
+}
+
+.list-head {
+
+    &__value {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 0.80rem;
+        color: var(--second-text-color);
+    }
+}
+
+.list-body {
+    tr {
+        border-bottom: 1px solid var(--border-line-color);
+        &:hover {
+            background-color: var(--rows-color);
+        }
+    }
+    &__subtitle {
+        display: none;
+    }
+    &__value {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.90rem 0;
+        font-size: 0.90rem;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin: 0 0.50rem 0 0.60rem;
+    }
+    &__name {
+
+        &-big {
+            display: block;
+            font-size: 0.90rem;
+            width: 100%;
+        }
+
+        &-small {
+            display: block;
+            font-size: 0.80rem;
+            color: var(--second-text-color);
+        }
+    }
+    &__button {
+        display: block;
+        width: 150px;
+        padding: 0.40rem 0;
+
+        font-size: 0.80rem;
+        color: var(--yellow-color);
+        border: 1px solid var(--yellow-color);
+        border-radius: 4px;
+        outline: none;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+            background-color: var(--yellow-color);
+            color: var(--white-color);
+        }
+
+    }
+}
+/** table home end */
+
+.home-example-image {
+    max-width: 700px;
+}
+
+
+/** table home media screen start */
+@media screen and (max-width: 1000px) {
+
+    .home-example-image {
+        max-width: 70%;
+    }
+
+    .table-home {
+        &__title {
+            margin: 8rem 0 3rem;
+        }
+    }
+
+    .list-head {
+        display: none;
+    }
+
+    .list-body {
+
+        tr {
+            &:hover {
+                background-color: none !important;
+            }
+        }
+
+        td {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:first-child {
+                padding-top: 3rem;
+            }
+            &:nth-last-child(1) {
+                padding-bottom: 1rem;
+                .list-body__value {
+                    padding-right: 0 !important;
+                }
+            }
+
+        }
+
+        &__subtitle {
+            display: block;
+        }
+
+    }
+
+}
+/** table home media screen end */
+
+
+
+/** table home media screen start */
+@media screen and (max-width: 670px) {
+
+    .home-example-image {
+        max-width: 80%;
+    }
+
+    .table-home {
+
+        &__title {
+            margin: 8rem 0 3rem;
+            margin-top: 2rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+/** table home media screen end */

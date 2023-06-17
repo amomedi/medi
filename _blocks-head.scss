@@ -1,0 +1,223 @@
+
+
+/** head start */
+.head {
+    background-color:var(--blue-dark-thir-color);
+    padding: 1px 0;
+    background-image: url("/images/bg-home.png");
+    background-size: cover;
+
+    &-row {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    /** title */
+    &-title {
+        text-align: center;
+        color: var(--white-color);
+
+        .typer-text {
+            color: var(--yellow-color) !important;
+        }
+
+        .typer-cursor {
+            color: var(--yellow-color) !important;
+        }
+
+        h1 {
+            width: 100%;
+            margin: 16rem auto 0;
+            font-weight: 400;
+            font-size: 4rem;
+        }
+        p { 
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        a {
+            display: block;
+            margin: 4rem auto 2rem;
+            padding: 1rem 0;
+            width: 200px;
+            font-size: 1rem;
+
+            border: 2px solid var(--white-color);
+            border-radius: 4px;
+            transition: all 0.5s ease-out;
+
+            &:hover {
+                background-color: var(--white-color);
+                color: var(--blue-dark-color);
+            }
+
+        }
+    }
+
+
+
+    /** carousel */
+    &-carousel {
+        position: relative;
+        margin: 8rem 0 0;
+        padding: 0 1rem;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--white-color);
+            opacity: 5%;
+        }
+
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3rem 0 2.80rem;
+        }
+
+        &__item {
+            width: 16%;
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--white-color);
+        }
+
+        &__coin {
+            display: flex;
+            justify-content: space-between;
+
+            // &-name {
+
+            // }
+
+            // &-number {
+
+            // }
+        }
+
+        &__value {
+            font-size: 2.50rem;
+            margin: 1rem 0 0;
+        }
+
+        &__price {
+            opacity: 50%;
+        }
+
+    }
+
+}
+/** head end */
+
+
+
+
+/** head media screen start */
+@media screen and (max-width: 1000px) {
+
+    .head {
+
+        &-row {
+            width: 96%;
+        }
+
+        &-title {
+            
+            h1 {
+                font-size: var(--h1-font__size);
+            }
+            p { 
+                width: 80%;
+                margin: 1rem auto 0;
+                font-size: var(--default-font__size);
+            }
+            a {
+                margin: 2rem auto 2rem;
+                font-size: var(--default-font__size);
+            }
+        }
+
+        /** carousel */
+        &-carousel {
+            position: relative;
+            margin: 6rem 0 0;
+            padding: 0 1rem;
+
+            &__inner {
+                padding: 2rem 0 1.80rem;
+            }
+
+            &__item {
+                width: 30%;
+                font-size: 0.90rem;
+            }
+
+            &__value {
+                font-size: 1.80rem;
+            }
+
+        }
+
+    }
+    
+
+}
+/** head media screen end */
+
+
+/** head media screen start */
+@media screen and (max-width: 670px) {
+
+    .head {
+
+        &-row {
+            width: 96%;
+        }
+
+        &-title {
+    
+            h1 {
+                margin: 12rem auto 0;
+                font-size: var(--h2-font__size);
+            }
+            p { 
+                font-size: var(--default-font__size);
+            }
+            a {
+                padding: 0.60rem 0;
+                width: 150px;
+                font-size: var(--default-font__size);
+            }
+        }
+
+        &-carousel {
+            position: relative;
+            margin: 6rem 0 0;
+            padding: 0 1rem;
+
+            &__inner {
+                padding: 2rem 0 0;
+            }
+
+            &__item {
+                width: 48%;
+                font-size: 0.90rem;
+            }
+
+            &__value {
+                font-size: 1.50rem;
+            }
+
+        }
+
+    }
+
+}
+/** head media screen end */
+
